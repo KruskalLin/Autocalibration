@@ -1,7 +1,7 @@
 # Simple Extrinsic Autocalibration Framework
 
-Still working on it...
+We are working on more datasets and more estimators. You can run by simple testing.
 
-## Run
+## For Simple Test
 1. downloads raw KITTI data
 2. run *script.sh*
