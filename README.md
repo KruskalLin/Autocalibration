@@ -40,4 +40,4 @@ We use [Hyperopt](https://github.com/hyperopt/hyperopt) for based optimization a
 [4] **A Novel Way to Organize 3D LiDAR Point Cloud as 2D Depth Map Height Map and Surface Normal Map.** Yuhang He, Long Chen, Jianda Chen, Ming Li. In ROBIO, 2015
 
 ## Licence
-Our work is under Creative Commons Legal Code.
+Our work is under [Creative Commons Legal Code](https://creativecommons.org/licenses/by/3.0/legalcode).
