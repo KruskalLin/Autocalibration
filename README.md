@@ -18,7 +18,7 @@ We provide several upsampling methods implements for calibration and depth refin
 | **Result**  | ![RGB](img/rgb.png)  | ![Linear](img/linear.png) | ![Nearest](img/nearest.png) | ![KNN](img/knn.png) | ![Barycentric](img/barycentric.png) |  ![Grid_weight](img/grid_weight.png) |
 
 
-|  Method   | Anisotropic Diffusion[2] | SD-Filter[3]  | Geometry | Modified Spatial[4] | Total Generalized Variation |  Clough Tocher |
+|  Method   | Anisotropic Diffusion[2] | SD-Filter[3]  | Geometry | Modified Spatial[4] | Total Generalized Variation[5] |  Clough Tocher |
 |  ----  | ---- | ----  | ----  | ----  | ----  | ----  |
 | Result  | ![Anisotropic](img/anisotropic.png) | ![SDFilter](img/sdfilter.png) | ![geometry](img/geometry.png) | ![Barycentric](img/spatial.png) |  ![tgv](img/tgv.png) | ![CloughTocher](img/clough.png)
 
@@ -38,6 +38,8 @@ We use [Hyperopt](https://github.com/hyperopt/hyperopt) for based optimization a
 [3] **Robust Image Filtering using Joint Static and Dynamic Guidance.** Bumsub Ham and Minsu Cho and Jean Ponce. In CVPR, 2015
 
 [4] **A Novel Way to Organize 3D LiDAR Point Cloud as 2D Depth Map Height Map and Surface Normal Map.** Yuhang He, Long Chen, Jianda Chen, Ming Li. In ROBIO, 2015
+
+[5] **Image Guided Depth Upsampling using Anisotropic Total Generalized Variation.** David Ferstl, Christian Reinbacher, Rene Ranftl, Matthias Rüther and Horst Bischof. In ICCV, 2013
 
 ## Licence
 Our work is under [Creative Commons Legal Code](https://creativecommons.org/licenses/by/3.0/legalcode).
