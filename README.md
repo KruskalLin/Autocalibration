@@ -13,7 +13,7 @@ Estimator:
 
 We provide several upsampling methods implements for calibration and depth refinement after calibration. We also modified some upsampling methods for less time cost and higher accuracy.
 
-|  **Method**   |  Origin | Linear | Nearest | KNN | Barycentric | Grid Weight |
+|  **Method**   |  RGB | Linear | Nearest | KNN | Barycentric | Grid Weight |
 |  ----  | ---- | ----  | ----  | ----  | ----  | ----  |
 | **Result**  | ![RGB](img/rgb.png)  | ![Linear](img/linear.png) | ![Nearest](img/nearest.png) | ![KNN](img/knn.png) | ![Barycentric](img/barycentric.png) |  ![Grid_weight](img/grid_weight.png) |
 
@@ -24,7 +24,7 @@ We provide several upsampling methods implements for calibration and depth refin
 
 ## Optimization
 
-We use [Hyperopt](https://github.com/hyperopt/hyperopt) for based optimization algorithms because the projection and cost calculation process is not explicitly convex and differentiable. A approximate training detail for three rotation parameters:
+We use [Hyperopt](https://github.com/hyperopt/hyperopt) for based optimization algorithms because the projection and cost calculation process is not explicitly convex and differentiable. An approximate training detail for three rotation parameters:
 
 |  **Method**   |  Bayesian Optimization | Stimulated Anneal |
 |  ----  | ---- | ----  | 
