@@ -33,16 +33,18 @@ COLORMAPS = {'rainbow': opencv_rainbow(),
              'bone': cm.get_cmap('bone', 10000)}
 
 
-def tensor2array(tensor, max_value=None, colormap='rainbow'):
-    tensor = tensor.detach().cpu()
+def array2color(arr, max_value=None, colormap='rainbow'):
     if max_value is None:
-        max_value = tensor.max().item()
-    if tensor.ndimension() == 2 or tensor.size(0) == 1:
-        norm_array = tensor.squeeze().numpy()/max_value
+        max_value = arr.max()
+
+    if arr.shape[-1] == 1:
+        arr = np.squeeze(arr, axis=2)
+
+    if len(arr.shape) == 2:
+        norm_array = arr / max_value
         array = COLORMAPS[colormap](norm_array).astype(np.float32)
         array = array.transpose(2, 0, 1)
-
-    elif tensor.ndimension() == 3:
-        assert(tensor.size(0) == 3)
-        array = 0.5 + tensor.numpy()*0.5
+    elif len(arr.shape) == 3:
+        assert(arr.shape[-1] == 3)
+        array = 0.5 + arr * 0.5
     return array

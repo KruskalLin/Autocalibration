@@ -1,10 +1,7 @@
 from path import Path
 from skimage.metrics import *
 from skimage.feature import *
-from color_utils import tensor2array
-import numpy as np
-import time
-import torch
+from color_utils import array2color
 from calib_utils import *
 from PIL import Image
 from imageio import imread
@@ -81,7 +78,7 @@ def generate_depth_map(velo, Tr, R_rect, P_rect, depth_size_ratio=1, depth_scale
             depth[y_loc, x_loc] = velo_pts_im[pts, 2].min()
 
     depth[depth < 0] = 0
-    interpolated_lidar = interpolator2d(depth, kind='linear')
+    interpolated_lidar = interpolator2d(depth)
     if interpolated_lidar.max() == interpolated_lidar.min():
         return interpolated_lidar
     interpolated_lidar = np.floor((interpolated_lidar - interpolated_lidar.min()) / (interpolated_lidar.max() - interpolated_lidar.min()) * 255) * depth_scale
@@ -110,11 +107,11 @@ def compute_loss(a, b, c, p, q, r, d=None, grad=False):
     depth = cv2.GaussianBlur(depth, (13, 13), 0)
     if visualize:
         vis.images(
-            tensor2array(torch.FloatTensor(depth), max_value=None,
-                         colormap='magma'), win='pst_depth', opts=dict(title='pst_depth'))
+            array2color(depth, max_value=None,
+                        colormap='magma'), win='pst_depth', opts=dict(title='pst_depth'))
         vis.images(
-            tensor2array(torch.FloatTensor(pre_depth), max_value=None,
-                         colormap='magma'), win='pre_depth', opts=dict(title='pre_depth'))
+            array2color(pre_depth, max_value=None,
+                        colormap='magma'), win='pre_depth', opts=dict(title='pre_depth'))
     loss1 = - np.sum(depth[int(depth.shape[0] / 2.5):, :] < 0.1) / (img_width * img_height)
     loss2 = structural_similarity(depth[int(depth.shape[0] / 2.5):, :], pre_depth[int(depth.shape[0] / 2.5):, :],
                                   win_size=27)
@@ -122,11 +119,11 @@ def compute_loss(a, b, c, p, q, r, d=None, grad=False):
     grad_pre = cv2.Sobel(pre_depth[int(pre_depth.shape[0] / 2.5):, :], cv2.CV_16S, 1, 0)
     if visualize:
         vis.images(
-            tensor2array(torch.FloatTensor(grad_depth), max_value=None,
-                         colormap='magma'), win='grad', opts=dict(title='grad'))
+            array2color(grad_depth, max_value=None,
+                        colormap='magma'), win='grad', opts=dict(title='grad'))
         vis.images(
-            tensor2array(torch.FloatTensor(grad_pre), max_value=None,
-                         colormap='magma'), win='grad_pre', opts=dict(title='grad_pre'))
+            array2color(grad_pre, max_value=None,
+                        colormap='magma'), win='grad_pre', opts=dict(title='grad_pre'))
     loss3 = structural_similarity(grad_pre, grad_depth)
 
     fd1 = hog(pre_depth[int(depth.shape[0] / 2.5):, :], pixels_per_cell=(7, 7), cells_per_block=(3, 3),
@@ -205,6 +202,12 @@ def main():
 
     print("Current best rot vec estimation:")
     print(best)
+    if visualize:
+        vis.line(trials.losses(), win='rot_losses')
+        vis.surf(list(zip(trials.vals['a'], trials.vals['b'])), win='rot_vals')
+
+    if (np.abs(best['b']) - 1.57) < 0.05:
+        print("Gimbal Lock!")
 
     trans = {'p': 0, 'q': 0, 'r': 0}
     rot_vec = best
@@ -223,6 +226,10 @@ def main():
 
     print("Current best trans estimation:")
     print(trans_vec)
+    if visualize:
+        vis.line(trials.losses(), win='trans_losses')
+        vis.surf(list(zip(trials.vals['p'], trials.vals['q'])), win='trans_vals')
+
     best.update(trans_vec)
 
     print("Current best estimation:")
