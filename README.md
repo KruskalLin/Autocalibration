@@ -32,8 +32,11 @@ We use [Hyperopt](https://github.com/hyperopt/hyperopt) for based optimization a
 
 ## Reference
 [1] **Unsupervised Monocular Depth Estimation with Left-Right Consistency.** Clément Godard, Oisin Mac Aodha and Gabriel J. Brostow. In CVPR, 2017
+
 [2] **Guided Anisotropic Diffusion and Iterative learning for Weakly Supervised Change Detection.** Rodrigo Caye Daudt, Bertrand Le Saux, Alexandre Boulch, Yann Gousseau. In CVPR, 2019
+
 [3] **Robust Image Filtering using Joint Static and Dynamic Guidance.** Bumsub Ham and Minsu Cho and Jean Ponce. In CVPR, 2015
+
 [4] **A Novel Way to Organize 3D LiDAR Point Cloud as 2D Depth Map Height Map and Surface Normal Map.** Yuhang He, Long Chen, Jianda Chen, Ming Li. In ROBIO, 2015
 
 ## Licence
