@@ -9,4 +9,4 @@ Estimator:
 
 |  Method   | Linear | Linear  |
 |  ----  | ---- | ----  |
-| Result  | [Linear](img/linear.png) | [Nearest](img/Nearest.png) |
+| Result  | ![Linear](img/linear.png) | ![Nearest](img/Nearest.png) |
