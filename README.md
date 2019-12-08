@@ -9,27 +9,27 @@ Estimator:
 
 <ul> 
     <li>
-        <a>
-           <img src="img/linear.png" />
-           <span>Linear Upsampling</span>
+        <a style="float:left; padding:4px 8px; width:160px">
+           <img style="display:block; width:160px; height:90px" src="img/linear.png" />
+           <span style="display:block; width:100%; height:30px; line-height:30px; background:#F6F6F6">Linear Upsampling</span>
         </a>
     </li> 
     <li>
-        <a>
-           <img src="img/nearest.png" />
-           <span>Nearest Upsampling</span>
+        <a style="float:left; padding:4px 8px; width:160px">
+           <img style="display:block; width:160px; height:90px" src="img/nearest.png" />
+           <span style="display:block; width:100%; height:30px; line-height:30px; background:#F6F6F6">Nearest Upsampling</span>
         </a>
     </li> 
     <li>
-        <a>
-           <img src="img/knn.png" />
-           <span>KNN Upsampling</span>
+        <a style="float:left; padding:4px 8px; width:160px">
+           <img style="display:block; width:160px; height:90px" src="img/knn.png" />
+           <span style="display:block; width:100%; height:30px; line-height:30px; background:#F6F6F6">KNN Upsampling</span>
         </a>
     </li> 
     <li>
-        <a>
-           <img src="img/barycentric.png" />
-           <span>Barycentric Upsampling</span>
+        <a style="float:left; padding:4px 8px; width:160px">
+           <img style="display:block; width:160px; height:90px" src="img/barycentric.png" />
+           <span style="display:block; width:100%; height:30px; line-height:30px; background:#F6F6F6">Barycentric Upsampling</span>
         </a>
     </li> 
 </ul> 
