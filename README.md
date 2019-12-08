@@ -7,6 +7,6 @@ Estimator:
 
 ## Upsampling Toolbox
 
-|  Method   | Linear | Linear  |
-|  ----  | ---- | ----  |
-| Result  | ![Linear](img/linear.png) | ![Nearest](img/Nearest.png) |
+|  Method   | Linear | Nearest  | KNN | Barycentric | Grid Weight |
+|  ----  | ---- | ----  | ----  | ----  | ----  |
+| Result  | ![Linear](img/linear.png) | ![Nearest](img/nearest.png) | ![KNN](img/knn.png) | ![Barycentric](img/barycentric.png) |  ![Grid_weight](img/grid_weight.png) |
