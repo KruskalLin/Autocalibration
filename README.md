@@ -27,8 +27,18 @@ We provide several upsampling methods implements for calibration and depth refin
 We use [Hyperopt](https://github.com/hyperopt/hyperopt) for based optimization algorithms because the projection and cost calculation process is not explicitly convex and differentiable. An approximate training detail for three rotation parameters:
 
 |  **Method**   |  Bayesian Optimization | Stimulated Anneal |
-|  ----  | ---- | ----  | 
+|  ----  | ---- | ----  |
 | **Loss**  | ![bayesian](img/bayesian_rot_loss.png)  | ![anneal](img/anneal_rot_loss.png) |
+
+## Result
+
+|  RGB   | Predicted depth map  | Calibrated depth map  |
+|  ----  | ---- | ----  |
+| ![rgb1](img/rgb1.png)  | ![depth1](img/depth1.png) | ![result1](img/result1.png) |
+| ![rgb2](img/rgb2.png)  | ![depth1](img/depth2.png) | ![result1](img/result2.png) |
+| ![rgb3](img/rgb3.png)  | ![depth1](img/depth3.png) | ![result1](img/result3.png) |
+| ![rgb4](img/rgb4.png)  | ![depth1](img/depth4.png) | ![result1](img/result4.png) |
+
 
 ## Reference
 [1] **Unsupervised Monocular Depth Estimation with Left-Right Consistency.** Clément Godard, Oisin Mac Aodha and Gabriel J. Brostow. In CVPR, 2017
