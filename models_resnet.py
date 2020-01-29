@@ -14,7 +14,7 @@ class conv(nn.Module):
         self.normalize = nn.BatchNorm2d(num_out_layers)
 
     def forward(self, x):
-        p = int(np.floor((self.kernel_size-1)/2))
+        p = int(np.floor((self.kernel_size - 1) / 2))
         p2d = (p, p, p, p)
         x = self.conv_base(F.pad(x, p2d))
         x = self.normalize(x)
@@ -38,7 +38,7 @@ class maxpool(nn.Module):
         self.kernel_size = kernel_size
 
     def forward(self, x):
-        p = int(np.floor((self.kernel_size-1) / 2))
+        p = int(np.floor((self.kernel_size - 1) / 2))
         p2d = (p, p, p, p)
         return F.max_pool2d(F.pad(x, p2d), self.kernel_size, stride=2)
 
@@ -50,9 +50,9 @@ class resconv(nn.Module):
         self.stride = stride
         self.conv1 = conv(num_in_layers, num_out_layers, 1, 1)
         self.conv2 = conv(num_out_layers, num_out_layers, 3, stride)
-        self.conv3 = nn.Conv2d(num_out_layers, 4*num_out_layers, kernel_size=1, stride=1)
-        self.conv4 = nn.Conv2d(num_in_layers, 4*num_out_layers, kernel_size=1, stride=stride)
-        self.normalize = nn.BatchNorm2d(4*num_out_layers)
+        self.conv3 = nn.Conv2d(num_out_layers, 4 * num_out_layers, kernel_size=1, stride=1)
+        self.conv4 = nn.Conv2d(num_in_layers, 4 * num_out_layers, kernel_size=1, stride=stride)
+        self.normalize = nn.BatchNorm2d(4 * num_out_layers)
 
     def forward(self, x):
         # do_proj = x.size()[1] != self.num_out_layers or self.stride == 2
@@ -132,7 +132,7 @@ class get_disp(nn.Module):
         p2d = (p, p, p, p)
         x = self.conv1(F.pad(x, p2d))
         x = self.normalize(x)
-        return 0.3 * self.sigmoid(x)
+        return 0.25 * self.sigmoid(x)
 
 
 class Resnet50_md(nn.Module):
@@ -151,22 +151,22 @@ class Resnet50_md(nn.Module):
         self.iconv6 = conv(1024 + 512, 512, 3, 1)
 
         self.upconv5 = upconv(512, 256, 3, 2)
-        self.iconv5 = conv(512+256, 256, 3, 1)
+        self.iconv5 = conv(512 + 256, 256, 3, 1)
 
         self.upconv4 = upconv(256, 128, 3, 2)
-        self.iconv4 = conv(256+128, 128, 3, 1)
+        self.iconv4 = conv(256 + 128, 128, 3, 1)
         self.disp4_layer = get_disp(128)
 
         self.upconv3 = upconv(128, 64, 3, 2)
-        self.iconv3 = conv(64+64+2, 64, 3, 1)
+        self.iconv3 = conv(64 + 64 + 2, 64, 3, 1)
         self.disp3_layer = get_disp(64)
 
         self.upconv2 = upconv(64, 32, 3, 2)
-        self.iconv2 = conv(32+64+2, 32, 3, 1)
+        self.iconv2 = conv(32 + 64 + 2, 32, 3, 1)
         self.disp2_layer = get_disp(32)
 
         self.upconv1 = upconv(32, 16, 3, 2)
-        self.iconv1 = conv(16+2, 16, 3, 1)
+        self.iconv1 = conv(16 + 2, 16, 3, 1)
         self.disp1_layer = get_disp(16)
 
         for m in self.modules():
@@ -236,25 +236,25 @@ class Resnet18_md(nn.Module):
 
         # decoder
         self.upconv6 = upconv(512, 512, 3, 2)
-        self.iconv6 = conv(256+512, 512, 3, 1)
+        self.iconv6 = conv(256 + 512, 512, 3, 1)
 
         self.upconv5 = upconv(512, 256, 3, 2)
-        self.iconv5 = conv(128+256, 256, 3, 1)
+        self.iconv5 = conv(128 + 256, 256, 3, 1)
 
         self.upconv4 = upconv(256, 128, 3, 2)
-        self.iconv4 = conv(64+128, 128, 3, 1)
+        self.iconv4 = conv(64 + 128, 128, 3, 1)
         self.disp4_layer = get_disp(128)
 
         self.upconv3 = upconv(128, 64, 3, 2)
-        self.iconv3 = conv(64+64 + 2, 64, 3, 1)
+        self.iconv3 = conv(64 + 64 + 2, 64, 3, 1)
         self.disp3_layer = get_disp(64)
 
         self.upconv2 = upconv(64, 32, 3, 2)
-        self.iconv2 = conv(64+32 + 2, 32, 3, 1)
+        self.iconv2 = conv(64 + 32 + 2, 32, 3, 1)
         self.disp2_layer = get_disp(32)
 
         self.upconv1 = upconv(32, 16, 3, 2)
-        self.iconv1 = conv(16+2, 16, 3, 1)
+        self.iconv1 = conv(16 + 2, 16, 3, 1)
         self.disp1_layer = get_disp(16)
 
         for m in self.modules():
@@ -321,30 +321,30 @@ def class_for_name(module_name, class_name):
 class ResnetModel(nn.Module):
     def __init__(self, num_in_layers, encoder='resnet18', pretrained=False):
         super(ResnetModel, self).__init__()
-        assert encoder in ['resnet18', 'resnet34', 'resnet50',\
-                           'resnet101', 'resnet152'],\
-                           "Incorrect encoder type"
+        assert encoder in ['resnet18', 'resnet34', 'resnet50', \
+                           'resnet101', 'resnet152'], \
+            "Incorrect encoder type"
         if encoder in ['resnet18', 'resnet34']:
             filters = [64, 128, 256, 512]
         else:
             filters = [256, 512, 1024, 2048]
-        resnet = class_for_name("torchvision.models", encoder)\
-                                (pretrained=pretrained)
+        resnet = class_for_name("torchvision.models", encoder) \
+            (pretrained=pretrained)
         if num_in_layers != 3:  # Number of input channels
             self.firstconv = nn.Conv2d(num_in_layers, 64,
-                              kernel_size=(7, 7), stride=(2, 2),
-                              padding=(3, 3), bias=False)
+                                       kernel_size=(7, 7), stride=(2, 2),
+                                       padding=(3, 3), bias=False)
         else:
-            self.firstconv = resnet.conv1 # H/2
+            self.firstconv = resnet.conv1  # H/2
         self.firstbn = resnet.bn1
         self.firstrelu = resnet.relu
-        self.firstmaxpool = resnet.maxpool # H/4
+        self.firstmaxpool = resnet.maxpool  # H/4
 
         # encoder
-        self.encoder1 = resnet.layer1 # H/4
-        self.encoder2 = resnet.layer2 # H/8
-        self.encoder3 = resnet.layer3 # H/16
-        self.encoder4 = resnet.layer4 # H/32
+        self.encoder1 = resnet.layer1  # H/4
+        self.encoder2 = resnet.layer2  # H/8
+        self.encoder3 = resnet.layer3  # H/16
+        self.encoder4 = resnet.layer4  # H/32
 
         # decoder
         self.upconv6 = upconv(filters[3], 512, 3, 2)
@@ -357,7 +357,7 @@ class ResnetModel(nn.Module):
         self.iconv4 = conv(filters[0] + 128, 128, 3, 1)
         self.disp4_layer = get_disp(128)
 
-        self.upconv3 = upconv(128, 64, 3, 1) #
+        self.upconv3 = upconv(128, 64, 3, 1)  #
         self.iconv3 = conv(64 + 64 + 2, 64, 3, 1)
         self.disp3_layer = get_disp(64)
 

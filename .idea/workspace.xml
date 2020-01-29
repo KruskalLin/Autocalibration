@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d2210049-7331-4657-a0c4-2eb22113c59a" name="Default Changelist" comment="commit img">
+      <change afterPath="$PROJECT_DIR$/.idea/autocalibration.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/R_User_Library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_03/0000000000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_03/0000000001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_03/0000000002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image_03/0000000003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lidar_interpolate_toolbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/lidar_interpolate_toolbox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loss.py" beforeDir="false" afterPath="$PROJECT_DIR$/loss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models_resnet.py" beforeDir="false" afterPath="$PROJECT_DIR$/models_resnet.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/monodepth_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/monodepth_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepare_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/prepare_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.sh" beforeDir="false" afterPath="$PROJECT_DIR$/script.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/transforms.py" beforeDir="false" afterPath="$PROJECT_DIR$/transforms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_utils.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Setup Script" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VfJkdAwI0QMLfnOHVEGQqhOB3P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/image_gt_03" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\autocalibration\autocalibration\image_gt_03" />
+      <recent name="D:\autocalibration\autocalibration\image_gt_02" />
+      <recent name="D:\autocalibration\autocalibration\image_03" />
+      <recent name="D:\autocalibration\autocalibration\image_02" />
+      <recent name="D:\autocalibration\autocalibration" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\autocalibration\autocalibration\sgm" />
+      <recent name="D:\autocalibration\autocalibration\image_03" />
+      <recent name="D:\autocalibration\autocalibration\image_02" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.sgm (1)">
+    <configuration name="census" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autocalibration" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/census.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sgm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autocalibration" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sgm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sgm/sgm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sgm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autocalibration" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:\autocalibration\autocalibration\sgm\sgm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autocalibration" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="upsample" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="autocalibration" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/upsample.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.sgm (1)" />
+        <item itemvalue="Python.sgm" />
+        <item itemvalue="Python.upsample" />
+        <item itemvalue="Python.census" />
+        <item itemvalue="Python.test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d2210049-7331-4657-a0c4-2eb22113c59a" name="Default Changelist" comment="" />
+      <created>1575794599183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1575794599183</updated>
+      <workItem from="1575794604370" duration="689000" />
+      <workItem from="1575813801795" duration="1024000" />
+      <workItem from="1575816445573" duration="1120000" />
+      <workItem from="1575819327201" duration="779000" />
+      <workItem from="1576080126272" duration="663000" />
+      <workItem from="1576126759745" duration="253000" />
+      <workItem from="1576128919243" duration="23000" />
+      <workItem from="1576128985237" duration="626000" />
+      <workItem from="1576129666767" duration="1289000" />
+      <workItem from="1577002185619" duration="1970000" />
+      <workItem from="1577027618806" duration="1025000" />
+      <workItem from="1577029058366" duration="298000" />
+      <workItem from="1577080891458" duration="1276000" />
+      <workItem from="1577163966831" duration="1806000" />
+      <workItem from="1577170402193" duration="3000" />
+      <workItem from="1577200327182" duration="307000" />
+      <workItem from="1577373922921" duration="2263000" />
+      <workItem from="1577425759263" duration="1364000" />
+      <workItem from="1577524157311" duration="1167000" />
+      <workItem from="1577551174969" duration="4358000" />
+      <workItem from="1577600156662" duration="787000" />
+      <workItem from="1577606896360" duration="4839000" />
+      <workItem from="1577638367484" duration="8774000" />
+      <workItem from="1577730281507" duration="3419000" />
+      <workItem from="1577795569542" duration="10297000" />
+      <workItem from="1577812327560" duration="7833000" />
+      <workItem from="1577867756335" duration="2544000" />
+      <workItem from="1577877098944" duration="8929000" />
+      <workItem from="1577897174877" duration="1377000" />
+      <workItem from="1577902104584" duration="225000" />
+      <workItem from="1577904885228" duration="176000" />
+      <workItem from="1577907269163" duration="161000" />
+      <workItem from="1577938586725" duration="230000" />
+      <workItem from="1577939639543" duration="611000" />
+      <workItem from="1577942601656" duration="2283000" />
+      <workItem from="1577945148877" duration="15025000" />
+      <workItem from="1577976353033" duration="74000" />
+      <workItem from="1577977181043" duration="3977000" />
+      <workItem from="1577981595630" duration="12910000" />
+      <workItem from="1578032389446" duration="199000" />
+      <workItem from="1578039799717" duration="3680000" />
+      <workItem from="1578140499587" duration="3214000" />
+      <workItem from="1578155077819" duration="1197000" />
+      <workItem from="1578234230482" duration="1236000" />
+      <workItem from="1578241650361" duration="930000" />
+      <workItem from="1578247671931" duration="1031000" />
+      <workItem from="1578297386113" duration="5303000" />
+      <workItem from="1578312510801" duration="4672000" />
+      <workItem from="1578320104513" duration="5965000" />
+      <workItem from="1578333363964" duration="2711000" />
+      <workItem from="1578399944849" duration="31000" />
+      <workItem from="1578411888020" duration="815000" />
+      <workItem from="1578413003603" duration="268000" />
+      <workItem from="1578455176553" duration="173000" />
+      <workItem from="1578459103116" duration="143000" />
+      <workItem from="1578467208421" duration="362000" />
+      <workItem from="1578467598400" duration="5478000" />
+      <workItem from="1578495632062" duration="472000" />
+      <workItem from="1578509619100" duration="599000" />
+      <workItem from="1578568233485" duration="4566000" />
+      <workItem from="1578582382280" duration="390000" />
+      <workItem from="1578589660857" duration="780000" />
+      <workItem from="1578653969488" duration="2096000" />
+      <workItem from="1578663548060" duration="3324000" />
+      <workItem from="1578679847296" duration="122000" />
+      <workItem from="1578680616355" duration="4497000" />
+      <workItem from="1578729043232" duration="5978000" />
+      <workItem from="1578792893484" duration="9000" />
+      <workItem from="1578797031868" duration="258000" />
+      <workItem from="1578843762597" duration="819000" />
+      <workItem from="1578880960465" duration="1225000" />
+      <workItem from="1578884032171" duration="3075000" />
+      <workItem from="1579137336388" duration="875000" />
+      <workItem from="1579170334350" duration="1361000" />
+      <workItem from="1579245888228" duration="826000" />
+      <workItem from="1579484615160" duration="109000" />
+      <workItem from="1579485038949" duration="7335000" />
+      <workItem from="1579504002035" duration="6975000" />
+      <workItem from="1579533889292" duration="3781000" />
+      <workItem from="1579622564039" duration="8362000" />
+      <workItem from="1579675247922" duration="245000" />
+      <workItem from="1579678256581" duration="5973000" />
+      <workItem from="1579710013290" duration="2544000" />
+      <workItem from="1579759976058" duration="3197000" />
+      <workItem from="1579781215406" duration="591000" />
+      <workItem from="1579794254776" duration="2999000" />
+      <workItem from="1579852309967" duration="3989000" />
+      <workItem from="1579874495312" duration="1362000" />
+      <workItem from="1579881776069" duration="11503000" />
+      <workItem from="1579968277087" duration="714000" />
+      <workItem from="1580023598182" duration="618000" />
+      <workItem from="1580053862950" duration="32387000" />
+      <workItem from="1580203666783" duration="760000" />
+      <workItem from="1580204520109" duration="5303000" />
+      <workItem from="1580213504686" duration="7840000" />
+    </task>
+    <task id="LOCAL-00001" summary="commit monodepth">
+      <created>1575794684539</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575794684539</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit img">
+      <created>1575813872470</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575813872470</updated>
+    </task>
+    <task id="LOCAL-00003" summary="commit changes">
+      <created>1575814750452</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575814750452</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit img">
+      <created>1575819343695</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575819343695</updated>
+    </task>
+    <task id="LOCAL-00005" summary="commit img">
+      <created>1576080683718</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576080683718</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit monodepth" />
+    <MESSAGE value="commit changes" />
+    <MESSAGE value="commit img" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit img" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="164" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580118926002">
+      <screen x="65" y="0" width="1215" height="720" />
+    </state>
+    <state x="421" y="164" key="#com.intellij.fileTypes.FileTypeChooser/65.0.1215.720@65.0.1215.720" timestamp="1580118926002" />
+    <state width="1173" height="155" key="GridCell.Tab.0.bottom" timestamp="1580195279241">
+      <screen x="63" y="0" width="1217" height="720" />
+    </state>
+    <state width="1173" height="155" key="GridCell.Tab.0.bottom/63.0.1217.720@63.0.1217.720" timestamp="1580195279241" />
+    <state width="1171" height="155" key="GridCell.Tab.0.bottom/65.0.1215.720@65.0.1215.720" timestamp="1580118305311" />
+    <state width="584" height="155" key="GridCell.Tab.0.bottom/67.0.1213.720@67.0.1213.720" timestamp="1578750199794" />
+    <state width="1173" height="155" key="GridCell.Tab.0.center" timestamp="1580195279240">
+      <screen x="63" y="0" width="1217" height="720" />
+    </state>
+    <state width="1173" height="155" key="GridCell.Tab.0.center/63.0.1217.720@63.0.1217.720" timestamp="1580195279240" />
+    <state width="1171" height="155" key="GridCell.Tab.0.center/65.0.1215.720@65.0.1215.720" timestamp="1580118305311" />
+    <state width="584" height="155" key="GridCell.Tab.0.center/67.0.1213.720@67.0.1213.720" timestamp="1578750199794" />
+    <state width="1173" height="155" key="GridCell.Tab.0.left" timestamp="1580195279239">
+      <screen x="63" y="0" width="1217" height="720" />
+    </state>
+    <state width="1173" height="155" key="GridCell.Tab.0.left/63.0.1217.720@63.0.1217.720" timestamp="1580195279239" />
+    <state width="1171" height="155" key="GridCell.Tab.0.left/65.0.1215.720@65.0.1215.720" timestamp="1580118305311" />
+    <state width="584" height="155" key="GridCell.Tab.0.left/67.0.1213.720@67.0.1213.720" timestamp="1578750199793" />
+    <state width="1173" height="155" key="GridCell.Tab.0.right" timestamp="1580195279240">
+      <screen x="63" y="0" width="1217" height="720" />
+    </state>
+    <state width="1173" height="155" key="GridCell.Tab.0.right/63.0.1217.720@63.0.1217.720" timestamp="1580195279240" />
+    <state width="1171" height="155" key="GridCell.Tab.0.right/65.0.1215.720@65.0.1215.720" timestamp="1580118305311" />
+    <state width="584" height="155" key="GridCell.Tab.0.right/67.0.1213.720@67.0.1213.720" timestamp="1578750199794" />
+    <state width="1169" height="220" key="GridCell.Tab.1.bottom" timestamp="1577812094246">
+      <screen x="67" y="0" width="1213" height="720" />
+    </state>
+    <state width="1169" height="220" key="GridCell.Tab.1.bottom/67.0.1213.720@67.0.1213.720" timestamp="1577812094246" />
+    <state width="1169" height="220" key="GridCell.Tab.1.center" timestamp="1577812094246">
+      <screen x="67" y="0" width="1213" height="720" />
+    </state>
+    <state width="1169" height="220" key="GridCell.Tab.1.center/67.0.1213.720@67.0.1213.720" timestamp="1577812094246" />
+    <state width="1169" height="220" key="GridCell.Tab.1.left" timestamp="1577812094246">
+      <screen x="67" y="0" width="1213" height="720" />
+    </state>
+    <state width="1169" height="220" key="GridCell.Tab.1.left/67.0.1213.720@67.0.1213.720" timestamp="1577812094246" />
+    <state width="1169" height="220" key="GridCell.Tab.1.right" timestamp="1577812094246">
+      <screen x="67" y="0" width="1213" height="720" />
+    </state>
+    <state width="1169" height="220" key="GridCell.Tab.1.right/67.0.1213.720@67.0.1213.720" timestamp="1577812094246" />
+    <state x="254" y="96" key="IDE.errors.dialog" timestamp="1577818232913">
+      <screen x="67" y="0" width="1213" height="720" />
+    </state>
+    <state x="254" y="96" key="IDE.errors.dialog/67.0.1213.720@67.0.1213.720" timestamp="1577818232913" />
+    <state x="173" y="3" key="SettingsEditor" timestamp="1578467766558">
+      <screen x="65" y="0" width="1215" height="720" />
+    </state>
+    <state x="173" y="3" key="SettingsEditor/65.0.1215.720@65.0.1215.720" timestamp="1578467766558" />
+    <state x="175" y="3" key="SettingsEditor/67.0.1213.720@67.0.1213.720" timestamp="1577642082015" />
+    <state x="354" y="185" width="674" height="349" key="com.intellij.ide.util.TipDialog" timestamp="1580213504648">
+      <screen x="63" y="0" width="1217" height="720" />
+    </state>
+    <state x="354" y="185" key="com.intellij.ide.util.TipDialog/63.0.1217.720@63.0.1217.720" timestamp="1580213504648" />
+    <state x="356" y="185" width="674" height="349" key="com.intellij.ide.util.TipDialog/65.0.1215.720@65.0.1215.720" timestamp="1580053889471" />
+    <state x="357" y="185" key="com.intellij.ide.util.TipDialog/66.0.1214.720@66.0.1214.720" timestamp="1578320399889" />
+    <state x="358" y="185" key="com.intellij.ide.util.TipDialog/67.0.1213.720@67.0.1213.720" timestamp="1579137337620" />
+    <state x="330" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1577954501445">
+      <screen x="67" y="0" width="1213" height="720" />
+    </state>
+    <state x="330" y="41" width="672" height="678" key="search.everywhere.popup/67.0.1213.720@67.0.1213.720" timestamp="1577954501445" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/autocalibration$upsample.coverage" NAME="upsample Coverage Results" MODIFIED="1580118284724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/autocalibration$sgm__1_.coverage" NAME="sgm (1) Coverage Results" MODIFIED="1580136675781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/sgm" />
+    <SUITE FILE_PATH="coverage/autocalibration$prepare_data.coverage" NAME="prepare_data Coverage Results" MODIFIED="1577796090431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/autocalibration$stereo.coverage" NAME="stereo Coverage Results" MODIFIED="1577642174902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/autocalibration$sgm.coverage" NAME="sgm Coverage Results" MODIFIED="1580131502440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/autocalibration$test.coverage" NAME="test Coverage Results" MODIFIED="1579488863746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/autocalibration$census.coverage" NAME="census Coverage Results" MODIFIED="1579691598120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

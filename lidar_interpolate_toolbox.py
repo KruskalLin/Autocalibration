@@ -256,6 +256,9 @@ def adjacency(edges, weights, N):
 
 
 def sd_filter(img, lidar_image, connect=0, lamda=10, mu=500, nu=200, step=3, is_sparse=True):
+    if len(img.shape) > 2 and img.shape[2] > 1:
+        img = img[:, :, 0]
+
     img = img / 255.
     lidar_image = lidar_image / 255.
     u0 = np.ones_like(lidar_image)
@@ -272,9 +275,6 @@ def sd_filter(img, lidar_image, connect=0, lamda=10, mu=500, nu=200, step=3, is_
     else:
         C = sparse.coo_matrix((np.ones(N), (range(0, N), range(0, N))))
         F = C @ f_vals.astype(np.float)
-
-    if len(img.shape) > 2 and img.shape[2] > 1:
-        img = cv2.cvtColor(img, cv2.COLOR_RGB2LAB)
 
     g_vals = img.transpose(1, 0).reshape(N)
     weights_g = make_weight_l2(edges, g_vals, mu)

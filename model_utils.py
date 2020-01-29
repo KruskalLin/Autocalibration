@@ -29,13 +29,10 @@ def get_model(model, input_channels=3, pretrained=False):
     return out_model
 
 
-def prepare_dataloader(data_directory, mode, augment_parameters,
-                       do_augmentation, batch_size, size, num_workers):
+def prepare_dataloader(data_directory, mode, batch_size, size, num_workers):
     data_dirs = Path(data_directory)
     data_transform = image_transforms(
         mode=mode,
-        augment_parameters=augment_parameters,
-        do_augmentation=do_augmentation,
         size=size)
     dataset = KittiLoader(data_dirs, mode, transform=data_transform)
     n_img = len(dataset)

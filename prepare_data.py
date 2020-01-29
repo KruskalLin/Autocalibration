@@ -4,25 +4,46 @@ from imageio import imread
 import random
 import numpy as np
 from tqdm import tqdm
+from shutil import copyfile
 
-def prepare(root):
-    data_dirs = Path(root).dirs()
-    image_paths = []
-    data_dirs = sorted(data_dirs, key=lambda x: x.stem)
-    for dir in data_dirs:
-        if dir.stem == 'whole_data':
-            continue
-        image_dir = dir / 'image_02' / 'data'
-        image_paths.extend(image_dir.files())
+dirname = './utils/filenames/'
+kitti_trains = open(dirname + 'kitti_train_files.txt').readlines()
+kitti_vals = open(dirname + 'kitti_val_files.txt').readlines()
+kitti_tests = open(dirname + 'kitti_test_files.txt').readlines()
+eigen_trains = open(dirname + 'eigen_train_files.txt').readlines()
+eigen_vals = open(dirname + 'eigen_val_files.txt').readlines()
+eigen_tests = open(dirname + 'eigen_test_files.txt').readlines()
+kitti_depth_trains = open(dirname + 'kitti_depth_train.txt').readlines()
+kitti_depth_vals = open(dirname + 'kitti_depth_val.txt').readlines()
 
-    new_dir = Path(root) / 'whole_data'
-    new_dir.makedirs_p()
+def prepare_data(root, output):
+    root = Path(root)
+    output = Path(output)
+    image_paths = [[root / p.strip().split(' ')[0], root / p.strip().split(' ')[1]] for p in kitti_tests]
     for i, p in tqdm(enumerate(image_paths)):
-        img = Image.fromarray(imread(p))
-        img.save(new_dir / ('{:010d}'.format(i) + '.png'))
-        img_name = p.stem
-        velo = np.fromfile(p.parent.parent.parent / 'velodyne_points' / 'data' / (img_name + '.bin'), dtype=np.float32)
-        velo.tofile(new_dir / ('{:010d}'.format(i) + '.bin'))
+        copyfile(p[0], output / 'image_02' / ('{:010d}'.format(i) + '.png'))
+        copyfile(p[1], output / 'image_03' / ('{:010d}'.format(i) + '.png'))
+        copyfile(p[0].parent.parent.parent / 'velodyne_points' / 'data' / (p[0].stem + '.bin'), output / 'velodyne_points' / ('{:010d}'.format(i) + '.bin'))
+
+def prepare_depth_data(root, output, gt):
+    root = Path(root)
+    output = Path(output)
+    gt = Path(gt)
+    image_left_paths = []
+    image_right_paths = []
+    for dir in gt.dirs():
+        image_left_paths.extend(sorted(((dir.dirs()[0].dirs()[0]) / 'image_02').files()))
+        image_right_paths.extend(sorted(((dir.dirs()[0].dirs()[0]) / 'image_03').files()))
+    for i, p in tqdm(enumerate(image_left_paths)):
+        copyfile(p, output / 'image_gt_02' / ('{:010d}'.format(i) + '.png'))
+        image_p = root / p.parent.parent.parent.parent.stem[:10] / p.parent.parent.parent.parent.stem / 'image_02' / 'data' / (p.stem + '.png')
+        copyfile(image_p, output / 'image_02' / ('{:010d}'.format(i) + '.png'))
+
+    for i, p in tqdm(enumerate(image_right_paths)):
+        copyfile(p, output / 'image_gt_03' / ('{:010d}'.format(i) + '.png'))
+        image_p = root / p.parent.parent.parent.parent.stem[
+                         :10] / p.parent.parent.parent.parent.stem / 'image_03' / 'data' / (p.stem + '.png')
+        copyfile(image_p, output / 'image_03' / ('{:010d}'.format(i) + '.png'))
 
 
 def select_data(root, output):
@@ -43,7 +64,11 @@ def select_data(root, output):
 
 
 if __name__ == '__main__':
-    root = '/data/data/2011_09_26'
+    root = '/data/data/'
+    kitti_train_output = '/data/data/kitti_depth_val'
+    gt = '/data/data/kitti_depth/val'
+    eigen_train_output = '/data/data/eigen_test'
     output = './selected_data'
-    prepare(root)
-    select_data(root, output)
+    # prepare_data(root, kitti_train_output)
+    prepare_depth_data(root, kitti_train_output, gt)
+    # select_data(root, output)
